@@ -102,11 +102,12 @@ This server provides a standardized interface for AI applications to control sys
 
 ### Music
 
-| Command            | Description                                      | Parameters |
-| ------------------ | ------------------------------------------------ | ---------- |
-| `play_pause_music` | Play or pause the current song in Music.app      | None       |
-| `next_track`       | Skip to the next track in Music.app              | None       |
-| `previous_track`   | Go back to the previous track in Music.app       | None       |
+| Command                | Description                                             | Parameters |
+| ---------------------- | -------------------------------------------------------| ---------- |
+| `play_pause_music`     | Play or pause the current song in Music.app            | None       |
+| `next_track`           | Skip to the next track in Music.app                    | None       |
+| `previous_track`       | Go back to the previous track in Music.app             | None       |
+| `get_info_current_track` | Get information about the current track in Music.app  | None       |
 
 
 ## Development
@@ -122,7 +123,7 @@ npm run build
 
 # Launch MCP Inspector
 # See: https://modelcontextprotocol.io/docs/tools/inspector
-npx @modelcontextprotocol/inspector node path/to/server/index.js args...
+npm run inspector
 ```
 
 ### Adding New Functionality

@@ -44,5 +44,23 @@ export const musicCategory: ScriptCategory = {
                 end tell
             `,
     },
+    {
+      name: "get_info_current_track",
+      description:
+        "Get information about the current track in the default music player on the system",
+      script: `
+                tell application "System Events"
+                    tell application "Music"
+                        set currentTrack to current track
+                        set trackName to name of currentTrack
+                        set artistName to artist of currentTrack
+                        set albumName to album of currentTrack
+                        set trackDuration to duration of currentTrack
+                        set trackInfo to "Track: " & trackName & ", Artist: " & artistName & ", Album: " & albumName & ", Duration: " & trackDuration
+                        return trackInfo
+                    end tell
+                end tell
+            `,
+    },
   ],
 };
