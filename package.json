@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node --esm src/index.ts"
+    "dev": "ts-node --esm src/index.ts",
+    "debug": "npx -y @modelcontextprotocol/inspector npx -y tsx src/index.ts"
   },
   "keywords": [
     "mcp",

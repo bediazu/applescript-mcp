@@ -100,6 +100,15 @@ This server provides a standardized interface for AI applications to control sys
 | `search_messages` | Search for messages containing specific text | `searchText`, `sender` (optional), `chatId` (optional), `limit` (optional, default: 50), `daysBack` (optional, default: 30) |
 | `compose_message` | Open Messages app with pre-filled message or auto-send   | `recipient` (required), `body` (optional), `auto` (optional, default: false) |
 
+### Music
+
+| Command            | Description                                      | Parameters |
+| ------------------ | ------------------------------------------------ | ---------- |
+| `play_pause_music` | Play or pause the current song in Music.app      | None       |
+| `next_track`       | Skip to the next track in Music.app              | None       |
+| `previous_track`   | Go back to the previous track in Music.app       | None       |
+
+
 ## Development
 
 ### Setup
@@ -193,8 +202,12 @@ After running `npm run build` add the following to your `mcp.json` file:
 {
   "mcpServers": {
     "applescript-mcp-server": {
-      "command": "node",
-      "args": ["/path/to/applescript-mcp/dist/index.js"]
+      "command": "npx",
+      "args": [
+        "-y",
+        "tsx",
+        "/path/to/applescript-mcp/src/index.ts"
+      ]
     }
   }
 }

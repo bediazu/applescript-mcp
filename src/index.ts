@@ -9,6 +9,7 @@ import { mailCategory } from "./categories/mail.js";
 import { pagesCategory } from "./categories/pages.js";
 import { shortcutsCategory } from "./categories/shortcuts.js";
 import { messagesCategory } from "./categories/messages.js";
+import { musicCategory } from "./categories/music.js";
 
 const server = new AppleScriptFramework({
   name: "applescript-server",
@@ -27,6 +28,7 @@ server.addCategory(mailCategory);
 server.addCategory(pagesCategory);
 server.addCategory(shortcutsCategory);
 server.addCategory(messagesCategory);
+server.addCategory(musicCategory);
 
 // Start the server
 server.run().catch(console.error);
